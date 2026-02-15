@@ -35,4 +35,68 @@ public class Array2 {
         return sum / (nums.length - 2);
     }
 
+    public int sum13(int[] nums) {
+
+        int sum = 0;
+        for(int i=0;i<nums.length;i++){
+
+            if(nums[i] == 13 ) i++;
+            else sum+=nums[i];
+        }
+        return sum;
+    }
+
+    public int sum67(int[] nums) {
+
+        boolean flag = true;
+        int sum = 0;
+        for (int num : nums) {
+
+            if (num == 6) {
+                flag = false;
+            }
+            else if (num == 7 && !flag) {
+                flag = true;
+                continue;
+            }
+            if (flag) sum += num;
+        }
+        return sum;
+    }
+
+    public boolean has22(int[] nums){
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i+1] == 2) return true;
+        }
+        return false;
+    }
+
+    public boolean lucky13(int[] nums) {
+
+        for(int x : nums) {
+            if(x == 3) return false;
+            if(x == 1) return false;
+        }
+
+        return true;
+    }
+
+    public boolean sum28(int[] nums) {
+
+        int sum = 0;
+
+        for (int x : nums) {
+            if(x == 2) sum+=x;
+        }
+        return sum ==8;
+    }
+
+
+
+
+
+
+
+
 }

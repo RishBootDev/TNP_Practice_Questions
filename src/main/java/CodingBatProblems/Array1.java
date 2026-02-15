@@ -76,6 +76,55 @@ public class Array1 {
                 || nums[1] == 2 || nums[1] == 3;
     }
 
+    public boolean no23(int[] nums) {
+        int a = nums[0];
+        int b = nums[1];
+
+        if((a != 2 && b !=2) && (a !=3 && b !=3)) return true;
+        return false;
+    }
+
+    public int[] makeLast(int[] nums) {
+
+        int res[] = new int[nums.length*2];
+
+        res[res.length-1] = nums[nums.length-1];
+
+        return res;
+    }
+
+    public boolean double23(int[] nums) {
+        return nums.length == 2 && (nums[0] == nums[1]) && (nums[0] == 2 || nums[0] == 3);
+    }
+
+    public int[] fix23(int[] nums) {
+
+        if(nums[0] == 2 && nums[1] == 3) nums[1] = 0;
+        if(nums[1] == 2 && nums[2] == 3) nums[2] = 0;
+
+        return nums;
+    }
+
+    public int start1(int[] a, int[] b) {
+
+        int count = 0;
+
+        if(a.length > 0 && a[0] == 1) count++;
+
+        if(b.length > 0 && b[0] == 1) count++;
+
+        return count;
+
+    }
+
+    public int[] biggerTwo(int[] a, int[] b) {
+
+        int sum1 = a[0] + a[1];
+        int sum2 = b[0] + b[1];
+
+        return sum1 >= sum2? a:b;
+
+    }
 
 
 
