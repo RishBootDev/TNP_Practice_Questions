@@ -12,7 +12,7 @@ public class Array3 {
                 if (nums[i] == nums[j]) {
                     int span = j - i + 1;
                     maxSpan = Math.max(maxSpan, span);
-                    break; // no need to check smaller j
+                    break;
                 }
             }
         }
