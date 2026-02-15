@@ -106,12 +106,64 @@ public class Array2 {
         return count1>count4;
     }
 
+    public boolean only14(int[] nums) {
 
+        for(int x: nums){
+            if(x != 1 && x!=4) return false;
+        }
 
+        return true;
+    }
 
+    public boolean isEverywhere(int[] nums, int val) {
 
+        for (int i= 0;i<nums.length-1;i++){
 
+            int a = nums[i];
+            int b = nums[i+1];
 
+            if(a!=val && b!=val) return false;
+        }
 
+        return true;
+    }
+    public boolean no14(int[] nums) {
+
+        boolean present1 = false;
+        boolean present4 = false;
+
+        for(int x : nums){
+            if(x == 1) present1 = true;
+            if(x == 4) present4 = true;
+
+            if(present1 && present4) return false;
+        }
+
+        return true;
+    }
+
+    public boolean has77(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 7) {
+
+                if (nums[i + 1] == 7) return true;
+
+                if (i < nums.length - 2 && nums[i + 2] == 7) return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean has12(int[] nums) {
+
+        boolean flag = false;
+
+        for(int x : nums) {
+            if (x == 1) flag = true;
+
+            if (flag && x == 2) return true;
+        }
+        return false;
+    }
 
 }
