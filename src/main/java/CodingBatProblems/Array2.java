@@ -1,6 +1,8 @@
 package CodingBatProblems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Array2 {
 
@@ -281,6 +283,63 @@ public class Array2 {
             }
         }
         return true;
+    }
+
+    public int[] withoutTen(int[] nums) {
+
+        int insertPos = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 10) {
+                nums[insertPos++] = nums[i];
+            }
+        }
+
+        while (insertPos < nums.length) {
+            nums[insertPos++] = 0;
+        }
+        return nums;
+    }
+
+    public int[] pre4(int[] nums) {
+
+        List<Integer> list = new ArrayList<>();
+
+        int i = 0;
+        while(nums[i] != 4){
+            list.add(nums[i++]);
+        }
+        int res []= new int[list.size()];
+        int k =0;
+
+        for(int x: list) {
+            res[k++] = x;
+        }
+        return res;
+    }
+
+    public String[] fizzBuzz(int start, int end) {
+
+        String[] result = new String[end - start];
+
+        for (int i = 0; i < result.length; i++) {
+
+            int num = start + i;
+
+            if (num % 15 == 0) {
+                result[i] = "FizzBuzz";
+            }
+            else if (num % 3 == 0) {
+                result[i] = "Fizz";
+            }
+            else if (num % 5 == 0) {
+                result[i] = "Buzz";
+            }
+            else {
+                result[i] = String.valueOf(num);
+            }
+        }
+        return result;
     }
 
 }
