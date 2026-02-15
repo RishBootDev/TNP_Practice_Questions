@@ -341,5 +341,79 @@ public class Array2 {
         }
         return result;
     }
+    public int[] fizzArray3(int start, int end) {
+
+        int[] result = new int[end - start];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = start + i;
+        }
+        return result;
+    }
+    public int[] post4(int[] nums) {
+
+        int last4 = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 4) {
+                last4 = i;
+            }
+        }
+        int[] result = new int[nums.length - last4 - 1];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = nums[last4 + 1 + i];
+        }
+        return result;
+    }
+
+    public int[] fizzArray(int n) {
+
+        int arr[]= new int[n];
+        for(int i = 0;i<n;i++){
+            arr[i] = i;
+        }
+        return arr;
+    }
+    public String[] fizzArray2(int n) {
+        String[] result = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            result[i] = String.valueOf(i);
+        }
+        return result;
+    }
+
+    public boolean either24(int[] nums) {
+        boolean has22 = false;
+        boolean has44 = false;
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) {
+                has22 = true;
+            }
+            if (nums[i] == 4 && nums[i + 1] == 4) {
+                has44 = true;
+            }
+        }
+        return has22 ^ has44;
+    }
+
+    public int matchUp(int[] nums1, int[] nums2) {
+
+        int count = 0;
+
+        for(int i =0;i<nums1.length;i++){
+            if(Math.abs(nums1[i]-nums2[i]) <= 2 && Math.abs(nums1[i]-nums2[i]) >0) count++;
+        }
+        return count;
+    }
+    public int[] shiftLeft(int[] nums) {
+        if (nums.length <= 1) return nums;
+
+        int first = nums[0];
+        for (int i = 0; i < nums.length - 1; i++) {
+            nums[i] = nums[i + 1];
+        }
+        nums[nums.length - 1] = first;
+        return nums;
+    }
 
 }
