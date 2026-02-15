@@ -166,4 +166,39 @@ public class Array2 {
         return false;
     }
 
+    public boolean haveThree(int[] nums) {
+
+        int count = 0;
+        for(int x : nums){
+            if(x == 3) count ++;
+        }
+        if(count != 3) return false;
+        for (int i = 0; i <nums.length-1 ; i++) {
+            if(nums[i] == 3 && nums[i+1] ==3) return false;
+        }
+        return true;
+    }
+
+    public boolean twoTwo(int[] nums) {
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 2) {
+
+                boolean leftIs2  = (i > 0 && nums[i - 1] == 2);
+                boolean rightIs2 = (i < nums.length - 1 && nums[i + 1] == 2);
+
+                if (!leftIs2 && !rightIs2) return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean tripleUp(int[] nums) {
+
+        for (int i = 0; i < nums.length -2; i++) {
+            if(nums[i] == nums[i+1]-1 && nums[i+1] == nums[i+2]-1) return true;
+        }
+        return false;
+    }
+
 }
