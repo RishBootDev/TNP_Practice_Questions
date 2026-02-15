@@ -1,6 +1,15 @@
 package CodingBatProblems;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Array3 {
+
+    public static void main(String[] args) {
+        Array3 array3 = new Array3();
+        array3.squareUp(4);
+    }
 
     public int maxSpan(int[] nums) {
 
@@ -37,4 +46,37 @@ public class Array3 {
         }
         return false;
     }
+
+    public boolean linearIn(int[] outer, int[] inner) {
+
+        Set<Integer> set = new HashSet<>();
+        for(int x : outer) set.add(x);
+
+        for(int x : inner){
+            if(!set.contains(x)) return false;
+
+        }
+
+        return true;
+    }
+
+    public int[] squareUp(int n) {
+
+        int[] ans = new int[n * n];
+        int i = 0;
+
+        for (int group = 1; group <= n; group++) {
+
+            int zeros = n - group;
+            for (int j = 0; j < zeros; j++) {
+                ans[i++] = 0;
+            }
+            for (int j = group; j >= 1; j--) {
+                ans[i++] = j;
+            }
+        }
+
+        return ans;
+    }
+
 }
