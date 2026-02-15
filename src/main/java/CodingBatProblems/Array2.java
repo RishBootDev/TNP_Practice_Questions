@@ -201,4 +201,33 @@ public class Array2 {
         return false;
     }
 
+    public int[] tenRun(int[] nums) {
+
+        int temp = 1;
+        for (int i = 0; i < nums.length; i++) {
+
+            if(nums[i]%10 ==0){
+                temp = nums[i];
+            }
+            else if(temp%10 == 0){
+                nums[i] = temp;
+            }
+        }
+        return nums;
+    }
+    public int[] notAlone(int[] nums, int val) {
+
+        for (int i = 1; i < nums.length - 1; i++) {
+
+            if (nums[i] == val &&
+                    nums[i - 1] != val &&
+                    nums[i + 1] != val) {
+
+                nums[i] = Math.max(nums[i - 1], nums[i + 1]);
+            }
+        }
+
+        return nums;
+    }
+
 }
