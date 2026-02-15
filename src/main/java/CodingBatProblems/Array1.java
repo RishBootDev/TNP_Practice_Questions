@@ -121,11 +121,90 @@ public class Array1 {
 
         int sum1 = a[0] + a[1];
         int sum2 = b[0] + b[1];
-
         return sum1 >= sum2? a:b;
+    }
+
+    public int[] swapEnds(int[] nums) {
+
+        int temp = nums[0];
+        nums[0] = nums[nums.length-1];
+        nums[nums.length-1] = temp;
+
+        return nums;
 
     }
 
+    public int[] plusTwo(int[] a, int[] b) {
+
+        return new int[]{a[0],a[1],b[0],b[1]};
+
+    }
+
+    public int[] makeMiddle(int[] nums) {
+        int mid = nums.length / 2;
+        return new int[] { nums[mid - 1], nums[mid] };
+    }
+
+    public int[] midThree(int[] nums) {
+        int mid = nums.length / 2;
+        return new int[] { nums[mid - 1], nums[mid], nums[mid + 1] };
+    }
+
+    public boolean unlucky1(int[] nums) {
+        int n = nums.length;
+
+        if (n >= 2 && nums[0] == 1 && nums[1] == 3) return true;
+        if (n >= 3 && nums[1] == 1 && nums[2] == 3) return true;
+        if (n >= 2 && nums[n - 2] == 1 && nums[n - 1] == 3) return true;
+
+        return false;
+    }
+
+    public int maxTriple(int[] nums) {
+        int mid = nums.length / 2;
+        return Math.max(nums[0], Math.max(nums[mid], nums[nums.length - 1]));
+    }
+
+    public int[] make2(int[] a, int[] b) {
+        int[] result = new int[2];
+        int index = 0;
+
+        for (int i = 0; i < a.length && index < 2; i++) {
+            result[index++] = a[i];
+        }
+
+        for (int i = 0; i < b.length && index < 2; i++) {
+            result[index++] = b[i];
+        }
+
+        return result;
+    }
+
+    public int[] front11(int[] a, int[] b) {
+
+        if(a.length >= 1 && b.length >= 1){
+            return new int[]{a[0],b[0]};
+        }
+        else if(a.length >= 1 && b.length == 0){
+            return new int[]{a[0]};
+        }
+        else if(a.length == 0 && b.length >= 1){
+            return new int[]{b[0]};
+        }
+
+        return new int[0];
+    }
+
+    public int[] frontPiece(int[] nums) {
+        int len = Math.min(2, nums.length);
+        int[] result = new int[len];
+
+        for (int i = 0; i < len; i++) {
+            result[i] = nums[i];
+        }
+
+        return result;
+    }
 
 
 }
