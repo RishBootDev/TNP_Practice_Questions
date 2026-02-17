@@ -6,3 +6,44 @@ IMPORTANT POINTS
 
 2. this should be the first statement in the constructor and only in one constructor
    call should be used with the this() syntax.
+
+3. Instance block invoked at the time of object creation
+
+class Test{
+
+   {
+      System.out.println("IB1");
+   }
+
+   Test(){
+      System.out.println("Hello");
+   }
+   Test(int a){
+      System.out.println("Bolo");
+   }
+
+   public static void main (String args[]){
+      Test t1 = new Test();
+      Test t2 = new Test();
+
+      // block will be called two times
+   }
+}
+
+4. the static block is called only once at the time of loading the class
+   and it is used to provide the value to the instance variables
+
+5. A inner class is a part of nested class -> class inside another class
+6. non static nested inner class is known as inner class
+7. Inner class access all the members of the outer class
+
+class Outer
+{
+     class Inner{
+         void show(){
+            System.out.println("The Inner class methods");
+         }
+     }
+}
+
+2 files will be created --> Outer.class and Outer$Inner.class
