@@ -56,3 +56,17 @@ class James{
         inner.show();
     }
 }
+
+class First{
+
+    static class Second{
+        void show(){
+            System.out.println("Hello world");
+        }
+    }
+
+    public static void main(String[] args) {
+        First.Second second = new First.Second();
+        second.show();
+    }
+}
