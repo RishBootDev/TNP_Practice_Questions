@@ -7,8 +7,13 @@ public class Array3 {
     public static void main(String[] args) {
         Array3 array3 = new Array3();
         array3.squareUp(4);
-
         System.out.println(Arrays.toString(array3.seriesUp(4)));
+
+        display();
+    }
+
+    static void display(){
+        System.out.println("Hello this is display");
     }
 
     public int maxSpan(int[] nums) {
