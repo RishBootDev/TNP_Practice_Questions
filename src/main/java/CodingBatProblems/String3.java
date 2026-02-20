@@ -49,4 +49,18 @@ public class String3 {
         }
         return isCount == notCount;
     }
+
+    public boolean gHappy(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'g') {
+                boolean leftG  = (i > 0 && str.charAt(i - 1) == 'g');
+                boolean rightG = (i < str.length() - 1 && str.charAt(i + 1) == 'g');
+
+                if (!leftG && !rightG) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
