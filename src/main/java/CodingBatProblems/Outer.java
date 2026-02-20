@@ -2,7 +2,6 @@ package CodingBatProblems;
 
 public class Outer {
 
-
     // this is a important concept of the member inner class
     void display() {
         class Temp{
