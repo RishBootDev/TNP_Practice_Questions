@@ -33,6 +33,29 @@ public class String1 {
 
         return str.substring(0,mid);
     }
+    public String withoutEnd(String str) {
+
+        return str.substring(1,str.length()-1);
+    }
+    public String comboString(String a, String b) {
+
+        String temp = a.length()>b.length()?a:b;
+
+        String bemp;
+        if(temp.equals(a)) bemp = b;
+        else bemp = a;
+        return bemp + temp + bemp;
+    }
+    public String nonStart(String a, String b) {
+        return a.substring(1) + b.substring(1);
+    }
+    public String left2(String str) {
+        return str.substring(2) + str.substring(0, 2);
+    }
+    public String right2(String str) {
+        int len = str.length();
+        return str.substring(len - 2) + str.substring(0, len - 2);
+    }
 
 
 
