@@ -23,4 +23,17 @@ public class String1 {
         return temp + temp + temp;
     }
 
+    public String firstTwo(String str) {
+        if(str.length()<2)  return str;
+        return str.substring(0,2);
+    }
+    public String firstHalf(String str) {
+
+        int mid = str.length()/2;
+
+        return str.substring(0,mid);
+    }
+
+
+
 }
