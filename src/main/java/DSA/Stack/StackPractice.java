@@ -19,6 +19,7 @@ public class StackPractice {
              java is not fully object-oriented so it introduced the concept of the
              wrapper classes
          */
+
         Stack<Integer> stack = new Stack<>();
         stack.push(10);
         stack.push(20);
