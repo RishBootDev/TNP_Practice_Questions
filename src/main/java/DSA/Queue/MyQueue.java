@@ -5,12 +5,12 @@ import java.util.Arrays;
 
 public class MyQueue {
 
-    int []queue;
-    int size;
-    int front;
-    int rear;
+    private int []queue;
+    private int size;
+    private int front;
+    private int rear;
 
-    MyQueue(int size) {
+    public MyQueue(int size) {
         this.size = size;
         this.queue = new int[size];
         front = rear = -1;
@@ -23,6 +23,19 @@ public class MyQueue {
         }else if(front == -1) front = 0;
         rear++;
         this.queue[rear] = data;
+    }
+
+    public int dequeue() {
+        if(this.front == -1) {
+            System.out.println("the queue is empty");
+            return Integer.MIN_VALUE;
+        }
+        int temp = this.queue[this.front];
+        this.queue[this.front] = 0;
+        if(front == rear) front = rear = -1;
+        else front ++;
+        return temp;
+
     }
 
     @Override
@@ -39,6 +52,12 @@ class MyQueueDriver{
         queue.enqueue(10);
         queue.enqueue(20);
         System.out.println(queue);
-        System.out.println(queue.front);
+       // System.out.println(queue.front);
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        System.out.println(queue);
+       // System.out.println(queue.front);
     }
 }
