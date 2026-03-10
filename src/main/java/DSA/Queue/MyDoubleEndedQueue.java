@@ -1,6 +1,8 @@
 package DSA.Queue;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Vector;
 
 public class MyDoubleEndedQueue {
 
@@ -30,7 +32,6 @@ public class MyDoubleEndedQueue {
             System.out.println("Queue is full");
             return;
         }
-
         if (isEmpty()) {
             front = rear = 0;
         }
@@ -50,7 +51,6 @@ public class MyDoubleEndedQueue {
             System.out.println("Queue is full");
             return;
         }
-
         if (isEmpty()) {
             front = rear = 0;
         }
@@ -60,7 +60,6 @@ public class MyDoubleEndedQueue {
         else {
             rear++;
         }
-
         queue[rear] = data;
     }
 
@@ -70,7 +69,6 @@ public class MyDoubleEndedQueue {
             System.out.println("Queue is empty");
             return Integer.MIN_VALUE;
         }
-
         int temp = queue[front];
         queue[front] = 0;
 
@@ -83,7 +81,6 @@ public class MyDoubleEndedQueue {
         else {
             front++;
         }
-
         return temp;
     }
 
@@ -93,7 +90,6 @@ public class MyDoubleEndedQueue {
             System.out.println("Queue is empty");
             return Integer.MIN_VALUE;
         }
-
         int temp = queue[rear];
         queue[rear] = 0;
 
@@ -106,7 +102,6 @@ public class MyDoubleEndedQueue {
         else {
             rear--;
         }
-
         return temp;
     }
 
@@ -123,15 +118,26 @@ class DoubleEndedQueueDriver {
     public static void main(String[] args) {
 
         MyDoubleEndedQueue dq = new MyDoubleEndedQueue(5);
+//
+//        dq.insertFront(10);
+//        dq.insertFront(20);
+//        dq.insertFront(30);
+//
+//        dq.insertRear(40);
+//
+//        dq.deleteFront();
 
-        dq.insertFront(10);
-        dq.insertFront(20);
-        dq.insertFront(30);
-
-        dq.insertRear(40);
-
-        dq.deleteFront();
+        ArrayDeque<Integer> arr = new ArrayDeque<>();
 
         System.out.println(dq);
+        // next class target complete study of Collections and Priority Queue in java
+
+        /*
+        the collection framework have the implementation of the ArrayDeque class
+        add methods throws runtime exception whereas the offer method will not throw any
+        exceptions.
+
+        the poll method in this class is equivalent to pop
+         */
     }
 }
