@@ -2,6 +2,7 @@ package DSA.Queue;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Vector;
 
 public class MyDoubleEndedQueue {
@@ -128,6 +129,8 @@ class DoubleEndedQueueDriver {
 //        dq.deleteFront();
 
         ArrayDeque<Integer> arr = new ArrayDeque<>();
+        Iterator<Integer> itr = arr.iterator();
+
 
         System.out.println(dq);
         // next class target complete study of Collections and Priority Queue in java

@@ -1,0 +1,12 @@
+
+LINKED LIST
+=============================================
+
+1. It is similar to the array and it is linear
+2. Each element of linked list has reference address pointer to the next element
+3. Each element of linked list are called as Node
+4. The node consist of data and next
+5. if the node's next part is null then that node is the last node
+
+
+IQ -> Why we need linked list??
