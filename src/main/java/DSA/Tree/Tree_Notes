@@ -11,3 +11,5 @@ IQ difference between the linear and non linear data structure?
       Root : topmost node of the tree (it is the endpoint of the tree)
       Height : the height of the tree is the height of the root node bottom to top
       Depth : arrow from top to bottom
+
+
