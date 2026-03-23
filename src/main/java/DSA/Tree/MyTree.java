@@ -40,6 +40,8 @@ public class MyTree {
         System.out.println();
         preOrder(root);
 
+        System.out.println(checkFull(root));
+
     }
 
     public void inorder(TreeNode root) {
@@ -71,5 +73,18 @@ public class MyTree {
     public static void main(String[] args) {
         MyTree mt = new MyTree(10);
         mt.tree();
+    }
+
+    public boolean checkFull(TreeNode root) {
+
+        if(root == null) return true;
+        if(root.left == null && root.right == null) return true;
+        if(root.left != null && root.right == null) return false;
+        if(root.left == null) return false;
+
+        boolean left = checkFull(root.left);
+        boolean right = checkFull(root.right);
+
+        return left && right;
     }
 }

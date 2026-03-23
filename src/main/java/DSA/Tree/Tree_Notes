@@ -28,3 +28,8 @@ IQ difference between the linear and non linear data structure?
       Inorder : left -> root -> right
       PostOrder : root -> left -> right
       PreOrder : left -> right -> root
+
+7. programs on traversal
+8. Types of BT :
+      1. Full BT
+      program : check the bt is full or not??
