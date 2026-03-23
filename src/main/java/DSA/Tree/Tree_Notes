@@ -1,0 +1,13 @@
+Tree Notes
+============================================================
+
+1. the tree is non linear data structure
+2. the tree consists nodes that connected by the edges
+IQ difference between the linear and non linear data structure?
+3. The time complexity of the linear data gets increased with the increased size in the data
+4. terminology:
+      Node : It is an entity that contains data and their references to the another node
+      Edge : it is a link between two nodes
+      Root : topmost node of the tree (it is the endpoint of the tree)
+      Height : the height of the tree is the height of the root node bottom to top
+      Depth : arrow from top to bottom
