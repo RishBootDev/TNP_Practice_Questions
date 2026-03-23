@@ -3,7 +3,9 @@ Tree Notes
 
 1. the tree is non linear data structure
 2. the tree consists nodes that connected by the edges
+
 IQ difference between the linear and non linear data structure?
+
 3. The time complexity of the linear data gets increased with the increased size in the data
 4. terminology:
       Node : It is an entity that contains data and their references to the another node
@@ -11,5 +13,14 @@ IQ difference between the linear and non linear data structure?
       Root : topmost node of the tree (it is the endpoint of the tree)
       Height : the height of the tree is the height of the root node bottom to top
       Depth : arrow from top to bottom
+
+5. Binary Tree : is a tree data structure where each parent node can have atmost 2 child nodes
+       the node consist of three parts
+
+       class TreeNode {
+             int data;
+             TreeNode left;
+             TreeNode right;
+       }
 
 
