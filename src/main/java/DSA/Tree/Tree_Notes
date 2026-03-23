@@ -23,4 +23,8 @@ IQ difference between the linear and non linear data structure?
              TreeNode right;
        }
 
+6. there are three traversal techniques : preorder , postorder and inorder
 
+      Inorder : left -> root -> right
+      PostOrder : root -> left -> right
+      PreOrder : left -> right -> root
