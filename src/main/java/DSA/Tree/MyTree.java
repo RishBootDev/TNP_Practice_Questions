@@ -30,7 +30,7 @@ public class MyTree {
         TreeNode t1 = new TreeNode(20);
         TreeNode t2 = new TreeNode(30);
         TreeNode t3 = new TreeNode(40);
-        TreeNode t4 = new TreeNode(20);
+        TreeNode t4 = new TreeNode(50);
 
         this.root.left = t1;
         this.root.right = t2;
@@ -48,6 +48,10 @@ public class MyTree {
         System.out.println("The node count is "+this.count);
 
         System.out.println(checkFull(root));
+
+        createMirrorTree(root);
+        System.out.println();
+        inorder(root);
 
     }
 
@@ -139,6 +143,22 @@ public class MyTree {
                 checkCBT(root.right, 2*index + 2, count);
 
     }
+
+    public void createMirrorTree(TreeNode root) {
+
+        if(root == null) return;
+
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+
+        root.right = left;
+        root.left = right;
+
+        createMirrorTree(root.left);
+        createMirrorTree(root.right);
+
+    }
+
 }
 
 
