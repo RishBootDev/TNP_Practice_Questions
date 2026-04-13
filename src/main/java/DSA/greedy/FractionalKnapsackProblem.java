@@ -38,6 +38,10 @@ public class FractionalKnapsackProblem {
 
     public static void main(String[] args) {
 
+        int[] values = {60,100,120};
+        int[] weight = {10,20,30};
+
+        System.out.println(fracknapsack(values, weight, 50));
     }
 
     static class Pair {
