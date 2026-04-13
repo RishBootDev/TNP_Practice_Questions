@@ -36,8 +36,7 @@ public class ActivitySelectionProblem {
             list.add(pair);
         }
 
-        Collections.sort(list,
-                (a,b) -> a.end - b.end);
+        list.sort((a, b) -> a.end - b.end);
 
         int temp = -1;
         int count = 0;
